@@ -1,0 +1,53 @@
+:root {
+    --branco: #f9faf5;
+    --roxo: #6e77ee;
+    --cinza: #e4e4e4;
+    --cinza-escuro: #b7bac3;
+}
+
+body {
+    background-color: var(--cinza);
+    height: 1900px;
+
+}
+.cookies_msg {
+    width: 80%;
+    background-color: var(--branco);
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15px;
+ /*   display: none;*/
+}
+
+/*.cookies_msg.mostrar {
+    display: block;
+}*/
+
+.cookies_msg .cookies_txt {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    
+}
+
+.cookies_msg .cookies_btn {
+    margin-left: 30px;
+}
+
+.cookies_msg .cookies_btn button {
+    background-color: var(--roxo);
+    color: var(--branco);
+    font-weight: 700px;
+    padding: 10px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+} 
+
+.cookies_msg .cookies_btn button:hover {
+    transform: scale(0.9);
+}
+

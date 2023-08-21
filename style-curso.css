@@ -1,0 +1,391 @@
+/*fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lora&family=Source+Code+Pro:ital@1&display=swap');
+
+@font-face {
+    font-family: "Azonix.otf";
+    src: url("/Users/raissa/Downloads/ProjetoWeb/font/Azonix.otf");
+}
+
+@font-face {
+    font-family: "BB bold";
+    src: url("file:///C:/Users/pedro/OneDrive/%C3%81rea%20de%20Trabalho/Site%20-%20Thallys/fontes/BancoDoBrasilTextos-bold.ttf");
+}
+
+@font-face {
+    font-family: "BB medium";
+    src: url("file:///C:/Users/pedro/OneDrive/%C3%81rea%20de%20Trabalho/Site%20-%20Thallys/fontes/BancoDoBrasilTextos-medium.ttf");
+}
+
+@font-face {
+    font-family: "BB regular";
+    src: url("file:///C:/Users/pedro/OneDrive/%C3%81rea%20de%20Trabalho/Site%20-%20Thallys/fontes/BancoDoBrasilTextos-regular.ttf");
+}
+
+/*formatação do cabeçalho*/ 
+.geral {
+    background: #000000;
+}
+
+nav {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+    padding: 45px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #eceaea;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+nav ul {
+    position: relative;
+}
+
+/*formatacao DropDown*/
+nav ul ul {
+    display: none;
+    position: absolute;
+    left: 1;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li{
+    width: 260px;
+    height: 80px;
+}
+nav ul ul li {
+    display: block;
+    padding: 10%;
+    background-color: #000000;
+    color: #eceaea;
+}
+nav ul ul li a{
+    font-size: 20px;
+    margin: 65px;
+}
+.dd{
+    margin: 2.4em;
+ }
+ .dda{
+     margin: 2.1em;
+  }
+    
+/*formatação da logo principal*/
+.logo {
+    width: 100%;
+    font-family: "Azonix.otf",sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    text-decoration: none;
+    margin-right: 1000px;
+    margin-left: 90px;
+}
+
+/*body*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.containerproje{
+    position: relative;
+}
+
+.containerproje .slide-container .slide{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 9%;
+    padding-bottom: 70px;
+}
+
+.containerproje .slide-container .slide .contentproje{
+    flex: 1 1 350px;
+    animation: slideContent .4s linear .4s backwards;
+}
+
+@keyframes slideContent{0%
+{
+    opacity: 0;
+    transform: translateX(-50px);
+}
+}
+
+
+.containerproje .slide-container .slide .contentproje h3{
+    font-size: 35px;
+    color: #51b7f3;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.containerproje .slide-container .slide .contentproje p{
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    width: 40%;
+    height: 10%;
+
+}
+
+.containerproje .slide-container .slide .contentproje .bntproj{
+    margin-top: 10px;
+    display: inline-block;
+    background: #6bc5f9;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 9px 40px;
+    border-radius: 5px;
+    border: 2px solid #6bc5f9;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+}
+
+.containerproje .slide-container .slide .contentproje .bntproj:hover{
+    background: #88ccf4;
+    border: 2px solid #88ccf4;
+    color: #ffffff;
+}
+
+.containerproje .slide-container{
+    display: none;
+}
+
+.containerproje .slide-container.active{
+    display: block;
+}
+
+.containerproje .slide-container:nth-child(1) .slide{
+    background: url(medium-shot-man-wearing-vr-glasses.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerproje .slide-container:nth-child(2) .slide{
+    background: url(woman-in-vr-glasses-float-in-neon-space-with-cables-attached-to-her-metaverse-avatar-concept\ \(1\).jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerproje .slide-container:nth-child(3) .slide{
+    background: url(closeup-of-woman-in-vr-glasses-float-in-neon-space-with-cables-attached-to-her-metaverse-avatar-concept.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerproje #prev, 
+.containerproje #next {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    background: #6bc5f9;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 50px;
+}
+
+.containerproje #prev:hover, 
+.containerproje #next:hover{
+    background: #9fd2f0;
+}
+.containerproje #prev{
+    left: 20px;
+}
+
+.containerproje #next{
+    right: 20px;
+}
+
+
+
+@media(max-width: 500px){
+    .containerproje #prev{
+        left: 0px;
+        top: 60%;
+    }
+
+    .containerproje #next{
+        right: 0px;
+        top: 60%;
+    }
+
+
+    .containerproje .slide-container .slide .contentproje p{
+        font-size: 16px;
+        color: #ffffff;
+        font-family: 'Noto Sans', sans-serif;
+        width: 70%;
+        height: 10%;
+    
+    }
+}
+.texto{ 
+    color: #000000;}
+
+/*formatação do rodapé*/
+
+.logo-rdp {
+    width: 125px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 0px 0 25px 30px;
+}
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 80vh;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    letter-spacing: 2px;
+}
+
+.footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 5px;
+}
+
+.footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+.footer_subscribe p:hover{
+    letter-spacing: 2px;
+    transition: all 0.4s;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
